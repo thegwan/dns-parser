@@ -1,6 +1,7 @@
 use {Error};
 use rdata::Record;
 use rdata::*;
+use serde::Serialize;
 
 /// The TYPE value according to RFC 1035
 ///
@@ -143,7 +144,7 @@ pub enum Opcode {
 
 quick_error! {
     /// The RCODE value according to RFC 1035
-    #[derive(Debug, PartialEq, Eq, Clone, Copy)]
+    #[derive(Debug, PartialEq, Eq, Clone, Copy, Serialize)]
     #[allow(missing_docs)] // names are from spec
     pub enum ResponseCode {
         NoError

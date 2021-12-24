@@ -16,9 +16,10 @@
 #![warn(missing_debug_implementations)]
 
 extern crate byteorder;
+extern crate serde;
 #[cfg(test)] #[macro_use] extern crate matches;
 #[macro_use(quick_error)] extern crate quick_error;
-#[cfg(feature = "with-serde")] #[macro_use] extern crate serde_derive;
+//#[cfg(feature = "with-serde")] #[macro_use] extern crate serde_derive;
 
 mod enums;
 mod structs;

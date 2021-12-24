@@ -2,7 +2,7 @@ use Error;
 
 #[derive(Debug, Clone)]
 pub struct Record<'a> {
-    bytes: &'a [u8],
+    pub bytes: &'a [u8],
 }
 
 #[derive(Debug)]

@@ -2,8 +2,9 @@ use std::net::Ipv6Addr;
 
 use Error;
 use byteorder::{BigEndian, ByteOrder};
+use serde::Serialize;
 
-#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+#[derive(Debug, PartialEq, Eq, Clone, Copy, Serialize)]
 pub struct Record(pub Ipv6Addr);
 
 impl<'a> super::Record<'a> for Record {
